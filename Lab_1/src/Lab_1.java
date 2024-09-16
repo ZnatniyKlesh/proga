@@ -41,7 +41,7 @@ public class Lab_1 {
                 else w[i][j] = expression_3(x[j]);
                 System.out.print(w[i][j] + " ");
             }
-            System.out.println();
+            
         }
     }
 }
