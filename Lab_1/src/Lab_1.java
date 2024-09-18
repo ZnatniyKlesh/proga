@@ -1,19 +1,27 @@
 import java.util.Random;
+import static java.lang.Math.*;
 
 
 public class Lab_1 {
+    public static void print_array(double[][] array) {
+        for (double[] i : array) {
+            for (double j : i) System.out.printf("%.5f ", j);
+            System.out.println();
+        }
+    }
+
     public static double expression_1(double x) {
-        double up = Math.cbrt(Math.pow((double) 2/3/x, x));
-        double down = Math.pow( (double) 1/4 / Math.pow(Math.PI * ((double) 2/3 + x), 3), 3) - 0.25;
-        return (double) Math.round((up / down) * 100000) / 100000;
+        double up = cbrt(pow((double) 2/3/x, x));
+        double down = pow( (double) 1/4 / pow(PI * ((double) 2/3 + x), 3), 3) - 0.25;
+        return (double) round((up / down) * 100000) / 100000;
     }
     public static double expression_2(double x) {
-        double result = Math.atan( Math.pow( Math.E, Math.cbrt(-Math.acos( x/12 ) )));
-        return (double) Math.round(result * 100000) / 100000;
+        double result = atan( pow( E, cbrt(-acos( x/12 ) )));
+        return (double) round(result * 100000) / 100000;
     }
     public static double expression_3(double x) {
-        double result = Math.pow( 0.25 / Math.cos( (0.25-Math.tan(x)) / Math.cos(x)), 3);
-        return (double) Math.round(result * 100000) / 100000;
+        double result = pow( 0.25 / cos( (0.25-tan(x)) / cos(x)), 3);
+        return (double) round(result * 100000) / 100000;
     }
 
     public static boolean contain_for_array (int[] array, int x) {
@@ -39,10 +47,9 @@ public class Lab_1 {
                 if (s[i] == 21) w[i][j] = expression_1(x[j]);
                 else if (contain_for_array(nums,s[i])) w[i][j] = expression_2(x[j]);
                 else w[i][j] = expression_3(x[j]);
-                System.out.print(w[i][j] + " ");
             }
-            
         }
+        print_array(w);
     }
 }
 
