@@ -33,7 +33,6 @@ public class Lab_1 {
         int[] s = new int[11];
         int[] nums = new int[]{7,9,13,17,23};
         double[] x = new double[15];
-        var test = 0;
         double[][] w = new double[11][15];
         Random rand = new Random();
 
