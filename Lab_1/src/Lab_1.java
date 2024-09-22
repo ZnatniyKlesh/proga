@@ -30,26 +30,26 @@ public class Lab_1 {
     }
 
     public static void main(String[] args) {
-        int[] s = new int[11];
+        int[] z = new int[11];
         int[] nums = new int[]{7,9,13,17,23};
         double[] x = new double[15];
-        double[][] w = new double[11][15];
+        double[][] z1 = new double[11][15];
         Random rand = new Random();
 
-        s[0] = 3;
+        z[0] = 3;
         for (int i = 0; i < x.length; i++) {
-            if (i < s.length && i > 0)  s[i] = s[i - 1] + 2;
+            if (i < z.length && i > 0)  z[i] = z[i - 1] + 2;
             x[i] = rand.nextDouble(12) - 6;
         }
 
         for (int i = 0; i < 11; i++) {
             for (int j = 0; j < 15; j++) {
-                if (s[i] == 21) w[i][j] = expression_1(x[j]);
-                else if (contain_for_array(nums,s[i])) w[i][j] = expression_2(x[j]);
-                else w[i][j] = expression_3(x[j]);
+                if (z[i] == 21) z1[i][j] = expression_1(x[j]);
+                else if (contain_for_array(nums,z[i])) z1[i][j] = expression_2(x[j]);
+                else z1[i][j] = expression_3(x[j]);
             }
         }
-        print_array(w);
+        print_array(z1);
     }
 }
 
